@@ -1,0 +1,20 @@
+{
+    "name": "kataproyecto",
+    "version": "1.0.0",
+    "description": "Backend de peliculas,usuarios y pedidos",
+    "main": "index.js",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "start": "node app.js"
+    },
+    "repository": {
+        "type": "git",
+        "url": "backendPeliculas"
+    },
+    "author": "DanielC1492",
+    "license": "ISC",
+    "dependencies": {
+        "express": "^4.17.1",
+        "mongoose": "^5.11.17"
+    }
+}
