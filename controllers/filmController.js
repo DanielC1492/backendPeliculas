@@ -1,34 +1,33 @@
-const mongoose = require("mongoose");
-const film = require('../models/filmModel');
+const Film = require('../models/filmModel');
 
 
 
-class Film {
+class Movie {
 
     constructor() {}
 
     //GET Films by name
 
     async findAllFilms(filmArray) {
-        return film.find(filmArray);
+        return Film.find(filmArray);
     };
 
     //GET Films by ID
 
     async findById({ id: id }) {
-        return film.findOne({ id: id });
+        return Film.findOne({ id: id });
     };
 
     //POST Insert a new film
 
-    async addFilm({ newMovie }) {
-        return film.create({ newMovie });
+    async addFilm(newMovie) {
+        return Film.create(newMovie);
     };
 
     //PUT Update film
 
     async updateFilm(movie) {
-        return film.findByIdAndUpdate(movie);
+        return Film.findByIdAndUpdate(movie);
     }
 
     //DELETE film by ID
@@ -43,5 +42,5 @@ class Film {
 }
 
 
-let filmController = new Film();
+let filmController = new Movie();
 module.exports = filmController;
