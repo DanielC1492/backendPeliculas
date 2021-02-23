@@ -5,9 +5,6 @@ const userSchema = {
     name: {
         type: String
     },
-    userID: {
-        type: String
-    },
     DNI: {
         type: String
     },
@@ -31,5 +28,5 @@ const userSchema = {
 
 };
 
-const User = mongoose.model("user", filmSchema);
+const User = mongoose.model("user", userSchema);
 module.exports = User;

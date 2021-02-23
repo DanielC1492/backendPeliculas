@@ -2,10 +2,10 @@
     "name": "kataproyecto",
     "version": "1.0.0",
     "description": "Backend de peliculas,usuarios y pedidos",
-    "main": "index.js",
+    "main": "app.js",
     "scripts": {
         "test": "echo \"Error: no test specified\" && exit 1",
-        "start": "node app.js"
+        "start": "nodemon app.js"
     },
     "repository": {
         "type": "git",

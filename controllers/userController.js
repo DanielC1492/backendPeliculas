@@ -12,7 +12,7 @@ class Customer {
         return User.find(userArray);
     };
 
-    //GET Films by ID
+    //GET Users by ID
 
     async findById({ id: id }) {
         return User.findOne({ id: id });
@@ -43,4 +43,4 @@ class Customer {
 
 
 let userController = new Customer();
-module.exports = filmController;
+module.exports = userController;
