@@ -1,15 +1,35 @@
-class User {
-    constructor(name, surname, userID, dni, email, password, phone, address, payment) {
-        this.name = name,
-            this.surname = surname,
-            this.userID = userID,
-            this.dni = dni,
-            this.email = email,
-            this.password = password,
-            this.phone = phone,
-            this.address = address,
-            this.payment = payment
-    };
+const mongoose = require("mongoose");
+
+
+const userSchema = {
+    name: {
+        type: String
+    },
+    userID: {
+        type: String
+    },
+    DNI: {
+        type: String
+    },
+    email: {
+        type: String
+    },
+    password: {
+        type: String,
+        required: true
+    },
+    phoneNumber: {
+        type: String
+    },
+    address: {
+        type: String
+    },
+    payment: {
+        type: String,
+        required: true
+    }
+
 };
 
+const User = mongoose.model("user", filmSchema);
 module.exports = User;

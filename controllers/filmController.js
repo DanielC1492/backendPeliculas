@@ -33,7 +33,7 @@ class Movie {
     //DELETE film by ID
 
     async deleteFilm({ id: id }) {
-        const idFound = film.findOneAndDelete({ id: id })
+        const idFound = Film.findOneAndDelete({ id: id })
         return idFound.remove()
     };
 
