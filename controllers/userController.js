@@ -14,8 +14,8 @@ class Customer {
 
     //GET Users by ID
 
-    async findById({ id: id }) {
-        return User.findOne({ id: id });
+    async findById(id) {
+        return User.findById(id);
     };
 
     //POST Insert a new user

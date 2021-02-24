@@ -14,8 +14,8 @@ class Movie {
 
     //GET Films by ID
 
-    async findById({ id: id }) {
-        return Film.findOne({ id: id });
+    async findById(id) {
+        return Film.findById(id);
     };
 
     //POST Insert a new film
@@ -28,7 +28,7 @@ class Movie {
 
     async updateFilm(movie) {
         return Film.findByIdAndUpdate(movie);
-    }
+    };
 
     //DELETE film by ID
 
@@ -36,10 +36,7 @@ class Movie {
         const idFound = Film.findOneAndDelete({ id: id })
         return idFound.remove()
     };
-
-
-
-}
+};
 
 
 let filmController = new Movie();

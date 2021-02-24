@@ -15,7 +15,8 @@ routerUser.get("/allusers", async(req, res) => {
 
 routerUser.get("/user/:id", async(req, res) => {
     try  {
-        res.json(await userController.findUserById())
+        const id = req.params.id;
+        res.json(await userController.findById(id))
     } catch (err) {
         return res.status(500).json({
             message: error.message
@@ -52,7 +53,7 @@ routerUser.delete('/remove-user/:id', async(req, res) => {
         await userController.deleteUser(id);
         res.json({ status, id });
     } catch (error) {
-        return res.Status(500).json({
+        return res.status(500).json({
             message: error.message
         });
     }
