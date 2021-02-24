@@ -2,30 +2,24 @@ const mongoose = require("mongoose");
 
 const orderSchema = {
 
-
-    idUser: {
-        type: ObjectId,
-        required: true,
+    order_date: {
+        type: Date
     },
-    idFilm: {
-        type: ObjectId,
-        required: true,
-    },
-    dateOrderInitial: {
+    return_date: {
         type: Date,
-        default: new Date,
-    },
-    dateOrderFinish: {
-        type: Date,
-        default: new Date(+new Date() + 2 * 24 * 60 * 60 * 1000)
+        default: new Date(+new Date() + 4 * 24 * 60 * 60 * 1000)
     },
     price: {
         type: String,
-        required: true,
-        default: "2€"
+        default: "2€",
+    },
+    customerId: {
+
+    },
+    filmId: {
+
     }
 
-
-}
+};
 const Order = mongoose.model("order", orderSchema);
 module.exports = Order;

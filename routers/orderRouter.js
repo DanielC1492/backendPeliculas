@@ -1,6 +1,6 @@
 const routerOrder = require("express").Router();
 const orderController = require("../controllers/orderController");
-const movieSchema = require("../models/oderModel");
+const movieSchema = require("../models/orderModel");
 
 //API use
 routerOrder.get("/allorders", async(req, res) => {
